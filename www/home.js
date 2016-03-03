@@ -27,7 +27,7 @@ $(function(){
 
                     $("#divSwiper").append("<div class=\"swiper-slide swiper-container-h\">" +
                     "<div class=\"swiper-wrapper\">" +
-                        "<div class=\"swiper-slide\">" +
+                        "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">" +
                             "<img src=\"" + cliente.URLImagem + "\">" +
                         "</div>" +
                         "<div class=\"swiper-slide\">Informações do cliente 1</div>" +
