@@ -25,16 +25,16 @@ $(function(){
                     // $("#divSwiper").html($("#divSwiper").html() + "<div class=\"swiper-slide swiper-container-h\"><div class=\"swiper-wrapper\"><div class=\"swiper-slide\">" + cliente.nome + "</div><div class=\"swiper-slide\">Informações do cliente 1</div><div class=\"swiper-slide\">Promoções  do cliente 1</div><div class=\"swiper-slide\">Mapa do cliente 1</div></div><div class=\"swiper-pagination swiper-pagination-h\"></div></div>");
 
 
-                    $("#divSwiper").append("<div class=\"swiper-slide swiper-container-h\">" +
-                    "<div class=\"swiper-wrapper\">" +
+                    $("#divSwiper").append("<div class=\"swiper-slide swiper-container-h\" style=\"background-color:" + cliente.cor + "\">" +
+                    "<div class=\"swiper-wrapper\" style=\"background-color:" + cliente.cor + "\">" +
                         "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">" +
                             "<img src=\"" + cliente.URLImagem + "\">" +
                         "</div>" +
-                        "<div class=\"swiper-slide\">Informações do cliente 1</div>" +
-                        "<div class=\"swiper-slide\">Promoções  do cliente 1</div>" +
-                        "<div class=\"swiper-slide\">Mapa do cliente 1</div>" +
+                        "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Informações do cliente 1</div>" +
+                        "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Promoções  do cliente 1</div>" +
+                        "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Mapa do cliente 1</div>" +
                     "</div>" +
-                    "<div class=\"swiper-pagination swiper-pagination-h\"></div>" +
+                    "<div class=\"swiper-pagination swiper-pagination-h\" style=\"background-color:" + cliente.cor + "\"></div>" +
                 "</div>");
                 }
 
