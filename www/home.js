@@ -32,10 +32,14 @@ $(function(){
                         "</div>" +
                         "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Informações do cliente 1</div>" +
                         "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Promoções  do cliente 1</div>" +
-                        "<div class=\"swiper-slide\" style=\"background-color:" + cliente.cor + "\">Mapa do cliente 1</div>" +
+                        "<div class=\"swiper-slide\">" +
+                            "<div id=\"map" + i + "\"></div>" +
+                        "</div>" +
                     "</div>" +
                     "<div class=\"swiper-pagination swiper-pagination-h\" style=\"background-color:" + cliente.cor + "\"></div>" +
                 "</div>");
+
+                    initMap(i, cliente.latitude, cliente.longitude);
                 }
 
 
@@ -51,7 +55,26 @@ $(function(){
                     direction: 'vertical',
                     spaceBetween: 50
                 });
+
+                initMap("", -23.6570978, -46.6916158);
+                // initMap(0, -23.6570978, -46.6916158);
             }
         });
+    }
+
+    function initMap(i, lat, lng) {
+        var mapDiv = document.getElementById('map' + i);
+        var myLatLng = {lat: lat, lng: lng};
+        var map = new google.maps.Map(mapDiv, {
+          center: myLatLng,
+          zoom: 15
+        });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Hello World!'
+        });
+
+        google.maps.event.trigger(map, 'resize'); 
     }
 });

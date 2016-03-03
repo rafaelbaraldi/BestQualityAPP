@@ -49,6 +49,15 @@
         background: #eee;
     }
     </style>
+
+    <style>
+      #map {
+        width: 500px;
+        height: 400px;
+        background-color: #CCC;
+      }
+    </style>
+
 </head>
 <body>
     <!-- Swiper -->
@@ -56,17 +65,19 @@
         <div class="swiper-container swiper-container-v">
             <div class="swiper-wrapper" id="divSwiper">
                 
-                <!--
                 <div class="swiper-slide swiper-container-h">
 			        <div class="swiper-wrapper">
 			            <div class="swiper-slide">Cliente 1</div>
 			            <div class="swiper-slide">Informações do cliente 1</div>
 			            <div class="swiper-slide">Promoções  do cliente 1</div>
-			            <div class="swiper-slide">Mapa do cliente 1</div>
+			            <div class="swiper-slide">
+                            <div id="mapl"></div>
+                        </div>
 			        </div>
 			        <div class="swiper-pagination swiper-pagination-h"></div>
 			    </div>
 
+                <!--
 				<div class="swiper-slide swiper-container-h">
 			        <div class="swiper-wrapper">
 			            <div class="swiper-slide">Cliente 2</div>
@@ -120,6 +131,9 @@
 
     <!-- Swiper JS -->
     <script src="dist/js/swiper.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"
+         async defer></script>
 
 </body>
 </html>
